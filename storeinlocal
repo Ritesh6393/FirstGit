@@ -1,0 +1,15 @@
+
+const form=document.querySelector('#form');
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+
+    const formData={
+        name:form.Name.value,
+        email:form.exampleInputEmail1.value,
+    }
+    const jsonData=JSON.stringify(formData);
+
+    localStorage.setItem('formData',jsonData);
+    
+});
